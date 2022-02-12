@@ -22,22 +22,11 @@ class Usuario {
         return `Cantidad de Masotas: ${contadorMascotas}`;
     }
 
-    addBook(titulo, autor) {
+    addBook(titulo,autor) {
         this.libros.push({nombreLibro: titulo, nombreAutor: autor});
     }
 
     getBookNames() {
-        // Con un for
-        // let titulosLibros = [];
-        
-        // for (let i = 0; i < this.libros.length; i++) {
-        //     titulosLibros.push(this.libros[i].nombreLibro);            
-        // }
-
-        // return `Titulos de libros: ${titulosLibros}`;
-        
-        
-        // Con un map
         let titulosLibros = this.libros.map(function(libro) {
             return libro.nombreLibro;
         });
@@ -51,7 +40,6 @@ class Usuario {
 let usuario1 = new Usuario("Dario", "Pirozzo");
 
 console.log(usuario1.getFullName());
-usuario1.addMascota("perrito");
 usuario1.addMascota("perro");
 usuario1.addMascota("gato");
 usuario1.addMascota("Caballo");
